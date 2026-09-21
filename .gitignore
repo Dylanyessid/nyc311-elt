@@ -8,3 +8,23 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Data (ignora contenido, conserva estructura)
+data/**
+!data/**/
+!data/**/.gitkeep
+*.duckdb
+*.duckdb.wal
+
+# Secrets
+.env
+
+# dbt
+dbt/target/
+dbt/dbt_packages/
+dbt/logs/
+
+# Tooling
+logs/
+.pytest_cache/
+.ruff_cache/
