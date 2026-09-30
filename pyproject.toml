@@ -28,3 +28,7 @@ dev = [
     "pytest>=9.1.1",
     "ruff>=0.16.8",
 ]
+
+[tool.pytest.ini_options]
+log_cli = true
+log_cli_level = "WARNING"
