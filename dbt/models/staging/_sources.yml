@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: nyc311
+    schema: raw
+    tables:
+      - name: service_requests

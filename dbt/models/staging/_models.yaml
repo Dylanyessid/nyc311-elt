@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_service_requests
+    description: Service requests del 311 de NYC, con tipos casteados y columnas renombradas. Excluye campos de taxis y puentes por estar casi siempre nulos.
+    columns:
+      - name: service_request_id
+        description: key of the requests
+        tests:
+          - unique
+          - not_null
+      - name: created_at
+        description: date of creation of the request
+        tests:
+          - not_null
+      - name: borough
+        tests:
+          - accepted_values:
+              values: ['BROOKLYN', 'QUEENS', 'MANHATTAN', 'BRONX', 'STATEN ISLAND', 'Unspecified']
