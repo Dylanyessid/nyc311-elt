@@ -39,8 +39,9 @@ class Settings:
             log_level=os.environ.get("LOG_LEVEL", "INFO").upper(),
         )
 
-COLUMNS: tuple[str, ...] = ("address_type",
 
+COLUMNS: tuple[str, ...] = (
+    "address_type",
     "agency",
     "agency_name",
     "bbl",
@@ -83,7 +84,8 @@ COLUMNS: tuple[str, ...] = ("address_type",
     "unique_key",
     "vehicle_type",
     "x_coordinate_state_plane",
-    "y_coordinate_state_plane")
+    "y_coordinate_state_plane",
+)
 
 COLUMNS_SET: set[str] = frozenset(COLUMNS)
 
